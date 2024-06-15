@@ -70,7 +70,6 @@ const CanvasArea: React.FC = () => {
   const draw = (ctx: CanvasRenderingContext2D) => {
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height); 
 
-    // Draw all lines
     lines.forEach(line => {
       const startNode = nodes[line.start];
       const endNode = nodes[line.end];
@@ -78,13 +77,12 @@ const CanvasArea: React.FC = () => {
       ctx.moveTo(startNode.x, startNode.y);
       ctx.lineTo(endNode.x, endNode.y);
       ctx.stroke();
-      // Draw correlation number
+
       const midX = (startNode.x + endNode.x) / 2;
       const midY = (startNode.y + endNode.y) / 2; 
       ctx.fillText(`Correlation: ${line.correlation}`, midX, midY);
     });
 
-    // Draw all nodes
     nodes.forEach(node => {
       ctx.fillStyle = '#000';
       ctx.beginPath();

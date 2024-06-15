@@ -70,7 +70,7 @@ export default function Component() {
         </form>
         <div className="text-center text-sm text-gray-500 dark:text-gray-400">
           Already have an account?{" "}
-          <Link href="auth/sign-in" className="font-medium text-gray-900 hover:underline dark:text-gray-400" prefetch={false}>
+          <Link href="./sign-in" className="font-medium text-gray-900 hover:underline dark:text-gray-400" prefetch={false}>
             Sign In
           </Link>
         </div>
